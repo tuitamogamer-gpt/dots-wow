@@ -1,0 +1,19 @@
+DOTS FOREVER — BRZI POČETAK
+
+1. Mapu DOTSForever kopiraj u Interface/AddOns svog WoW Forever klijenta.
+   Beta: World of Warcraft/_classic_beta_/Interface/AddOns/
+2. Ponovno pokreni WoW, uključi addon i upiši /dots.
+3. Dvoklikom otvori companion/index.html iz ovog paketa.
+4. Napiši pitanje u addonu i kopiraj ga na companion stranicu.
+5. Klikni Otvori moj DOTS, odaberi svog dota te zalijepi i pošalji pitanje.
+6. Odgovor kopiraj na companion stranicu, pripremi ga za addon i vrati u igru
+   kroz Uvezi odgovor.
+
+Glasovni poziv: otvori svog dota i klikni telefon u ChatGPT razgovoru.
+Poruke se prenose ručno. Nema API ključa ni automatske internetske veze iz WoW-a.
+Potrebni su tvoj ChatGPT račun i dostupan dot.
+
+Ciljani klijent: Forever beta, Interface 16001.
+Automatizirani testovi ne zamjenjuju provjeru u stvarnom WoW klijentu.
+
+Detaljne upute, naredbe, ograničenja i izvori: README.md

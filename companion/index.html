@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="no-referrer">
+  <title>DOTS Forever · Veza s tvojim agentom</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="protocol.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#request">Preskoči na zahtjev</a>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">D<span>✦</span></span><span>DOTS <strong>FOREVER</strong></span></div>
+      <span class="connection"><span aria-hidden="true"></span>Ručna veza</span>
+    </header>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div class="eyebrow">TVOJ SUPUTNIK U AZEROTHU</div>
+      <h1 id="page-title">Pozovi svog <em>DOTS agenta.</em></h1>
+      <p>Prenesi pitanje iz WoW addona u svoj stvarni dot, pa vrati njegov odgovor u igru.</p>
+      <p class="hero-note">Ovaj pomoćnik radi lokalno. Poruke šalješ ručno u ChatGPT-u.</p>
+    </section>
+
+    <div class="workflow">
+      <section class="panel request-panel" aria-labelledby="request-title">
+        <div class="section-heading"><span class="step">01</span><div><h2 id="request-title">Pitanje iz igre</h2><p>U igri upiši <code>/dots</code>, pripremi pitanje i kopiraj zahtjev.</p></div></div>
+        <label for="request">Zahtjev iz addona</label>
+        <textarea id="request" rows="9" placeholder="DOTS_REQUEST:…&#10;Ovdje zalijepi cijeli zahtjev iz addona." spellcheck="false" autocomplete="off" aria-describedby="request-help request-count"></textarea>
+        <div class="field-meta"><span id="request-help">Počinje s <code>DOTS_REQUEST:</code></span><span id="request-count">0 / 14.000 bajtova</span></div>
+        <div class="request-id" id="request-id">Čeka se zahtjev iz igre.</div>
+        <button class="button primary" id="copy-request" type="button"><span aria-hidden="true">→</span> Kopiraj pitanje za DOTS</button>
+        <p class="status" id="request-status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="panel agent-panel" aria-labelledby="agent-title">
+        <div class="section-heading"><span class="step">02</span><div><h2 id="agent-title">Razgovaraj sa svojim dotom</h2><p>Otvori svog agenta u ChatGPT-u.</p></div></div>
+        <div class="portal" aria-hidden="true"><span>✦</span><i></i></div>
+        <p class="agent-instructions">Odaberi svoj dot, zalijepi kopirano pitanje i pošalji ga. Zatim kopiraj njegov odgovor.</p>
+        <a class="button secondary" id="open-dot" href="https://chatgpt.com/dots" target="_blank" rel="noopener noreferrer">Otvori moj DOTS <span aria-hidden="true">→</span></a>
+        <div class="voice-note"><span class="voice-symbol" aria-hidden="true">◖))</span><div><strong>Želiš glasovni poziv?</strong><p>U razgovoru s dotom u ChatGPT-u pritisni gumb telefona. Poziv se odvija u ChatGPT-u.</p></div></div>
+        <details class="settings"><summary>Poveznica na moj dot</summary><div class="settings-content"><label for="dot-url">ChatGPT poveznica</label><input id="dot-url" type="url" value="https://chatgpt.com/dots" spellcheck="false" autocomplete="off" aria-describedby="url-help"><p id="url-help">Možeš spremiti izravnu poveznicu svog dota na chatgpt.com. Sprema se samo poveznica u ovom pregledniku.</p><button class="button small" id="save-url" type="button">Spremi poveznicu</button><p class="status" id="url-status" role="status" aria-live="polite"></p></div></details>
+      </section>
+
+      <section class="panel reply-panel" aria-labelledby="reply-title">
+        <div class="section-heading"><span class="step">03</span><div><h2 id="reply-title">Vrati odgovor u igru</h2><p>Zalijepi odgovor agenta. Pomoćnik provjerava ID i priprema tekst za addon.</p></div></div>
+        <div class="reply-grid">
+          <div><label for="reply">Stvarni odgovor tvog agenta</label><textarea id="reply" rows="7" placeholder="Zalijepi odgovor iz razgovora sa svojim dotom…" spellcheck="false" autocomplete="off" aria-describedby="reply-help"></textarea><p class="field-note" id="reply-help">Prihvaća i običan tekst. Zaglavlje <code>DOTS_REPLY:</code> dodaje se automatski.</p><button class="button secondary" id="prepare-reply" type="button">Pripremi za addon <span aria-hidden="true">→</span></button></div>
+          <div class="export"><label for="import-text">Tekst za povratak u addon</label><textarea id="import-text" rows="7" placeholder="Pripremljen odgovor pojavit će se ovdje." readonly spellcheck="false" aria-describedby="import-help"></textarea><p class="field-note" id="import-help">Kopiraj tekst, vrati se u igru i zalijepi ga u polje za odgovor unutar <code>/dots</code>.</p><button class="button primary" id="copy-reply" type="button" disabled>Kopiraj za addon</button></div>
+        </div>
+        <p class="status" id="reply-status" role="status" aria-live="polite"></p>
+      </section>
+    </div>
+
+    <footer><span>DOTS FOREVER <span aria-hidden="true">✦</span> LOKALNI POMOĆNIK</span><p>Bez API ključa, automatskog slanja i spremanja razgovora. Za odgovor je potreban tvoj stvarni dot.</p><a href="https://learn.chatgpt.com/docs/dots/channels" target="_blank" rel="noopener noreferrer">Službene upute za DOTS <span aria-hidden="true">→</span></a></footer>
+  </main>
+  <noscript><p class="noscript">Za provjeru i pripremu poruka uključi JavaScript. Pitanje i dalje možeš ručno prenijeti u ChatGPT.</p></noscript>
+</body>
+</html>

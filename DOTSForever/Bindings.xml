@@ -1,0 +1,5 @@
+<Bindings>
+    <Binding name="DOTSFOREVER_TOGGLE" header="DOTSFOREVER">
+        DOTSForever:Toggle()
+    </Binding>
+</Bindings>

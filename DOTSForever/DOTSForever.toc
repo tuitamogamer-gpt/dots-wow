@@ -1,0 +1,11 @@
+## Interface: 16001
+## Title: DOTS Forever
+## Notes: Razgovaraj sa svojim DOTS agentom uz rucni prijenos poruka.
+## Author: DOTS Forever
+## Version: 0.1.0
+## SavedVariablesPerCharacter: DOTSForeverDB
+
+Protocol.lua
+Core.lua
+UI.lua
+Bindings.xml
